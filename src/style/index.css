@@ -1,0 +1,83 @@
+body{
+    background-image: url("/media/images/background1.svg");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    position: fixed;
+}
+
+.container{
+    padding: 10px;
+    background: snow;
+    opacity: 95%;
+}
+
+.align{
+    text-align: center;
+}
+
+#titre{
+    width: 400px;
+    border-radius: 25px;
+    margin-top: 150px;
+    margin-left: 12%;
+    animation: animationLancement 1s ease;
+}
+
+#titre h2{
+    font-size: 3rem;
+}
+
+#selection{
+    border-radius: 25px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    animation: animationLancement 1s ease;
+}
+
+#selection > a > img{
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#selection > a > img:hover{
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
+    border-radius: 30px;
+    font-size: 50px;
+}
+
+
+@keyframes animationLancement {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 100px;
+    }
+}
+
+.projet{
+    position: relative;
+    text-align: center;
+    color: darkblue;
+}
+
+.title{
+    position: absolute;
+    font-size: 20px;
+    top:  0px;
+    left: 60px;
+}
+
+
+
+img > .nav-item{
+    border-radius: 20px;
+}
