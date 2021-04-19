@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("/media/images/background1.svg");
     background-repeat: repeat-y;
     background-attachment: fixed;
@@ -6,53 +6,90 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav{
+nav {
     position: fixed;
 }
 
-.container{
+.container {
     padding: 10px;
     background: snow;
     opacity: 95%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 
-.align{
+.container .row {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .container .row {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+.align {
     text-align: center;
 }
 
-#titre{
+#titre {
     width: 400px;
     border-radius: 25px;
     margin-top: 150px;
     margin-left: 12%;
+    -webkit-animation: animationLancement 1s ease;
     animation: animationLancement 1s ease;
 }
 
-#titre h2{
+@media screen and (max-width: 568px) {
+    #titre {
+        margin-left: auto;
+    }
+}
+
+#titre h2 {
     font-size: 3rem;
 }
 
-#selection{
+#selection {
     border-radius: 25px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    -webkit-animation: animationLancement 1s ease;
     animation: animationLancement 1s ease;
 }
 
-#selection > a > img{
+#selection>a>img {
     margin: 20px;
     border-radius: 5px;
 }
 
-#selection > a > img:hover{
+#selection>a>img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     border-radius: 30px;
     font-size: 50px;
 }
 
+@-webkit-keyframes animationLancement {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 100px;
+    }
+}
 
 @keyframes animationLancement {
     0% {
@@ -63,21 +100,19 @@ nav{
     }
 }
 
-.projet{
+.projet {
     position: relative;
     text-align: center;
     color: darkblue;
 }
 
-.title{
+.title {
     position: absolute;
     font-size: 20px;
-    top:  0px;
-    left: 60px;
+    top: calc(100% - 4rem);
+    width: 100%;
 }
 
-
-
-img > .nav-item{
+img>.nav-item {
     border-radius: 20px;
 }
